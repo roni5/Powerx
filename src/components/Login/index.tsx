@@ -13,7 +13,7 @@ export function Login() {
       <div className={styles.container}>
         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
           Welcome
-          <span> {auth.user.name}.</span>
+          <span className="uppercase"> {auth.user.name}</span>
         </h1>
         <button
           className="flex items-center  mx-auto text-white bg-lime-500 border-0 py-2 px-8 focus:outline-none hover:bg-lime-600 rounded text-lg"
@@ -35,7 +35,7 @@ export function Login() {
         <span className="ml-4 flex items-start flex-col px-6 leading-none">
           <span className="title-font font-medium px-6">Please log in</span>
           <span className="text-md text-gray-600 mb- px-6 ">
-            to access resource
+            to access resources
           </span>
         </span>
         <input
