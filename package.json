@@ -1,8 +1,9 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "powerx",
+  "version": "1",
   "private": true,
   "dependencies": {
+    "@babel/plugin-proposal-async-generator-functions": "^7.20.7",
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -15,8 +16,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.0",
-    "react-scripts": "4.0.3",
-    "typescript": "~4.1.5"
+    "react-scripts": "^5.0.1",
+    "typescript": "~4.1.5",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.2",
+    "@babel/plugin-proposal-private-property-in-object": "^7.18.6"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +44,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "notes",
+  "main": "index.tsx",
+  "repository": "https://github.com/roni5/Powerx.git",
+  "author": "Roni McGuinness <roniemail1@gmail.com>",
+  "license": "MIT"
 }
