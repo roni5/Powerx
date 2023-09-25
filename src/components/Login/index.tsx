@@ -11,8 +11,16 @@ export function Login() {
   if (auth.status === LoginStatus.LOGGED_IN) {
     return (
       <div className={styles.container}>
-        <span>Welcome, {auth.user.name}.</span>
-        <button onClick={() => dispatch(logout())}>Logout</button>
+        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
+          Welcome
+          <span> {auth.user.name}.</span>
+        </h1>
+        <button
+          className="flex items-center  mx-auto text-white bg-lime-500 border-0 py-2 px-8 focus:outline-none hover:bg-lime-600 rounded text-lg"
+          onClick={() => dispatch(logout())}
+        >
+          Logout
+        </button>
       </div>
     );
   } else {
@@ -24,14 +32,23 @@ export function Login() {
           dispatch(login({ username: loginUsername }));
         }}
       >
-        <h3>Please log in to access this resource.</h3>
+        <span className="ml-4 flex items-start flex-col px-6 leading-none">
+          <span className="title-font font-medium px-6">Please log in</span>
+          <span className="text-md text-gray-600 mb- px-6 ">
+            to access resource
+          </span>
+        </span>
         <input
+          className="max-w-md bg-gray-100 rounded border-lime-500 bg-opacity-50  focus:ring-2 focus:ring-lime-200 focus:bg-transparent focus:border-lime-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
           type="text"
           placeholder="Username"
           value={loginUsername}
           onChange={(e) => setLoginUsername(e.target.value)}
         />
-        <button disabled={auth.status === LoginStatus.LOGIN_PENDING}>
+        <button
+          className="flex mx-auto text-white bg-lime-500 border-0 py-2 px-8 focus:outline-none hover:bg-lime-600 rounded text-lg"
+          disabled={auth.status === LoginStatus.LOGIN_PENDING}
+        >
           Login
         </button>
       </form>
